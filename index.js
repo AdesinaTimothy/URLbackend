@@ -15,7 +15,7 @@ app.use(cors({
   }));
 
 app.use(express.json())
-// app.use(authenticationMiddleware)
+
 
 
 app.get("/", (req, res) => {
