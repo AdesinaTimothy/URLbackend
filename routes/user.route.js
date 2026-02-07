@@ -75,11 +75,3 @@ return res.status(200).json({ token , message: "Login Successfull with token" })
 
 export default router;
 
-// res.cookie("token", token, {
-//     httpOnly: true,
-//     secure: process.env.NODE_ENV === "production",
-//     sameSite: "strict",
-//     maxAge: 60 * 60 * 1000, 
-// })
-
-// return res.status(200).json({message: "Login Sucessfull"})

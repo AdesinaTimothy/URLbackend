@@ -55,7 +55,7 @@ router.delete("/:id", authenticationMiddleware, ensureAuthenticated, async funct
 })
 
 router.get("/:shortcodes", async function (req, res) {
-    const code = req.params.shortcodes
+    const code = req.params.shortcodes.toLowerCase()
     const [result] = await db.select({
         newTargetURL: urlsTable.targetURL
     }).from(urlsTable).where(eq(urlsTable.shortCode, code))
